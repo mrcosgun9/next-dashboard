@@ -1,13 +1,15 @@
 import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-
+import { DefaultButton, PrimaryButton, ThemeProvider, initializeIcons } from '@fluentui/react';
+import { CompoundButton } from '@fluentui/react/lib/Button';
 const Home: NextPage = () => {
   return (
-    <h1 className="text-3xl font-bold underline text-red-500">
-      Hello world!
-    </h1>
+    <ThemeProvider>
+      <DefaultButton onClick={() => alert('hello')}>Hello World</DefaultButton>
+      <PrimaryButton onClick={() => alert('hello')}>Hello World</PrimaryButton>
+      <CompoundButton primary secondaryText="This is the secondary text." >
+        Primary
+      </CompoundButton>
+    </ThemeProvider>
   )
 }
 
