@@ -9,10 +9,21 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@fluentui/react": "^8.77.0",
+    "@mantine/core": "^4.2.10",
+    "@mantine/dates": "^4.2.10",
+    "@mantine/dropzone": "^4.2.10",
+    "@mantine/form": "^4.2.10",
+    "@mantine/hooks": "^4.2.10",
+    "@mantine/modals": "^4.2.10",
+    "@mantine/next": "^4.2.10",
+    "@mantine/notifications": "^4.2.10",
+    "@mantine/prism": "^4.2.10",
+    "@mantine/rte": "^4.2.10",
+    "dayjs": "^1.11.3",
     "next": "12.1.6",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "tabler-icons-react": "^1.50.0"
   },
   "devDependencies": {
     "@types/node": "18.0.0",
