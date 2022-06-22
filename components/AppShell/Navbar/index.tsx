@@ -2,7 +2,7 @@ import { Navbar, ScrollArea } from "@mantine/core";
 import type { NextPage } from "next";
 import { useRouter } from "next/router";
 import { useState } from "react";
-import { Home, Table } from "tabler-icons-react";
+import { Forms, Home, Table, Article } from "tabler-icons-react";
 import NavbarLinksGroup from "./NavBarLinksGroups/NavbarLinksGroup";
 
 const NavbarIndex: NextPage = () => {
@@ -12,11 +12,35 @@ const NavbarIndex: NextPage = () => {
     {
       label: 'Tables',
       icon: Table,
-      initiallyOpened: router.pathname == '/cars' || router.pathname == '/cars/create',
+      initiallyOpened: router.pathname.includes('/tables'),
       links: [
         { label: 'Basic Table', link: '/tables' },
+        { label: 'Sorting Table', link: '/tables/sortingDataTable' },
+        { label: 'Sorting Selected Table', link: '/tables/sortingSelectedDataTable' },
       ],
 
+    },
+    {
+      label: 'Pages',
+      icon: Article,
+      initiallyOpened: router.pathname.includes('/page/'),
+      links: [
+        { label: '404 Page', link: '/page/error/404' },
+        { label: '500 Page', link: '/page/error/500' },
+        { label: '503 Page', link: '/page/error/503' },
+        { label: 'Blank Page', link: '/page/blank' },
+
+      ],
+    },
+    {
+      label: 'Forms',
+      icon: Forms,
+      initiallyOpened: router.pathname.includes('/cars'),
+      links: [
+        { label: 'Basic Form', link: '/tables' },
+        { label: 'Sorting Table', link: '/tables/sortingDataTable' },
+        { label: 'Sorting Selected Table', link: '/tables/sortingSelectedDataTable' },
+      ],
     },
 
   ];
