@@ -2,7 +2,7 @@ import { Navbar, ScrollArea } from "@mantine/core";
 import type { NextPage } from "next";
 import { useRouter } from "next/router";
 import { useState } from "react";
-import { Home, CalendarStats, PresentationAnalytics, FileAnalytics, Adjustments, Lock, Table } from "tabler-icons-react";
+import { Home, Table } from "tabler-icons-react";
 import NavbarLinksGroup from "./NavBarLinksGroups/NavbarLinksGroup";
 
 const NavbarIndex: NextPage = () => {
@@ -15,31 +15,10 @@ const NavbarIndex: NextPage = () => {
       initiallyOpened: router.pathname == '/cars' || router.pathname == '/cars/create',
       links: [
         { label: 'Basic Table', link: '/tables' },
-        { label: 'Ekle', link: '/cars/create' },
       ],
 
     },
-    {
-      label: 'Releases',
-      icon: CalendarStats,
-      links: [
-        { label: 'Upcoming releases', link: '/' },
-        { label: 'Previous releases', link: '/' },
-        { label: 'Releases schedule', link: '/' },
-      ],
-    },
-    { label: 'Analytics', icon: PresentationAnalytics },
-    { label: 'Contracts', icon: FileAnalytics },
-    { label: 'Settings', icon: Adjustments },
-    {
-      label: 'Security',
-      icon: Lock,
-      links: [
-        { label: 'Enable 2FA', link: '/' },
-        { label: 'Change password', link: '/' },
-        { label: 'Recovery codes', link: '/' },
-      ],
-    },
+
   ];
   const [opened] = useState(false);
   const links = mockdata.map((item) => <NavbarLinksGroup {...item} key={item.label} />);

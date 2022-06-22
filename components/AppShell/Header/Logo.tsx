@@ -4,8 +4,8 @@ function Logo({ colorScheme }: { colorScheme: ColorScheme }) {
   return (
     <>
       <Link href="/">
-        <a>
-          Dashboard Logo
+        <a className='text-gray-600 font-extrabold text-2xl'>
+          LOGO
         </a>
       </Link>
 
