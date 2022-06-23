@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import { createStyles, Title, Text, Button, Container, Group } from '@mantine/core';
 import Link from "next/link";
+import Head from "next/head";
 
 const useStyles = createStyles((theme) => ({
   root: {
@@ -43,12 +44,16 @@ const Custom404: NextPage = () => {
   const { classes } = useStyles();
   return (
     <>
+      <Head>
+        <title>404 Error Page</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <Container className={classes.root}>
         <div className={classes.label}>404</div>
         <Title className={classes.title}>Aradığın sayfayı bulamıyoruz.</Title>
         <Text color="dimmed" size="lg" align="center" className={classes.description}>
           Ne yazık ki, bu sadece bir 404 sayfası. <br />
-          Adresi yanlış yazmış olabilirsiniz veya sayfa başka bir URL'ye taşınmış olabilir.
+          Adresi yanlış yazmış olabilirsiniz veya sayfa başka bir taşınmış olabilir.
         </Text>
         <Group position="center">
           <Link href="/">

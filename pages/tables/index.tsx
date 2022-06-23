@@ -3,6 +3,7 @@ import {
   Table,
 
 } from '@mantine/core';
+import MainLayout from "../../layouts/MainLayout";
 const elements = [
   { position: 6, mass: 12.011, symbol: 'C', name: 'Carbon' },
   { position: 7, mass: 14.007, symbol: 'N', name: 'Nitrogen' },
@@ -22,17 +23,20 @@ const TableIndex: NextPage = () => {
 
   return (
     <>
-      <Table highlightOnHover>
-        <thead>
-          <tr>
-            <th>Element position</th>
-            <th>Element name</th>
-            <th>Symbol</th>
-            <th>Atomic mass</th>
-          </tr>
-        </thead>
-        <tbody>{rows}</tbody>
-      </Table>
+      <MainLayout title="Basic Table">
+        <Table highlightOnHover>
+          <thead>
+            <tr>
+              <th>Element position</th>
+              <th>Element name</th>
+              <th>Symbol</th>
+              <th>Atomic mass</th>
+            </tr>
+          </thead>
+          <tbody>{rows}</tbody>
+        </Table>
+      </MainLayout>
+
     </>
   )
 }

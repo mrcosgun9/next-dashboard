@@ -1,10 +1,8 @@
 import { AppShell, Card, createStyles } from "@mantine/core"
-import Head from "next/head"
 import AppShellHeaderIndex from "./Header/Index"
 import NavbarIndex from "./Navbar"
 
 type AppShellType = {
-  title?: string;
   children?: React.ReactNode;
 }
 const useStyles = createStyles((theme) => ({
@@ -12,12 +10,10 @@ const useStyles = createStyles((theme) => ({
     backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.white,
   },
 }));
-function AppShellIndex({ title, children }: AppShellType) {
+function AppShellIndex({ children }: AppShellType) {
   const { classes } = useStyles();
   return <>
-    <Head>
-      <title>{title}</title>
-    </Head>
+
     <AppShell
       padding="md"
       navbar={

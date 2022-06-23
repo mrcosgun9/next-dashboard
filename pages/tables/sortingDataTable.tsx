@@ -1,5 +1,6 @@
 
 import DataTable from 'react-data-table-component';
+import MainLayout from '../../layouts/MainLayout';
 
 const columns = [
   {
@@ -30,10 +31,13 @@ const data = [
 function SortingDataTable() {
   return (
     <>
-      <DataTable
-        columns={columns}
-        data={data}
-      />
+      <MainLayout title='Sorting Data Table'>
+        <DataTable
+          columns={columns}
+          data={data}
+        />
+      </MainLayout>
+
     </>
   )
 }

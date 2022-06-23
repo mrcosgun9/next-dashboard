@@ -1,5 +1,6 @@
 
 import DataTable from 'react-data-table-component';
+import MainLayout from '../../layouts/MainLayout';
 
 const columns = [
   {
@@ -25,48 +26,21 @@ const data = [
     title: 'Ghostbusters',
     year: '1984',
   },
-  {
-    id: 3,
-    title: 'Beetlejuice',
-    year: '1988',
-  },
-  {
-    id: 4,
-    title: 'Ghostbusters',
-    year: '1984',
-  },
-  {
-    id: 5,
-    title: 'Beetlejuice',
-    year: '1988',
-  },
-  {
-    id: 6,
-    title: 'Ghostbusters',
-    year: '1984',
-  },
-  {
-    id: 7,
-    title: 'Beetlejuice',
-    year: '1988',
-  },
-  {
-    id: 8,
-    title: 'Ghostbusters',
-    year: '1984',
-  },
 ]
 
-function SortingSelectedDataTable() {
+function SortingDataTable() {
   return (
     <>
-      <DataTable
-        columns={columns}
-        data={data}
-        selectableRows pagination
-      />
+      <MainLayout title='Sorting Data Table'>
+        <DataTable
+          columns={columns}
+          data={data}
+          selectableRows
+        />
+      </MainLayout>
+
     </>
   )
 }
 
-export default SortingSelectedDataTable
+export default SortingDataTable

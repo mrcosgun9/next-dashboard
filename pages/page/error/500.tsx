@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import { createStyles, Title, Text, Button, Container, Group } from '@mantine/core';
 import Link from "next/link";
+import Head from "next/head";
 
 const useStyles = createStyles((theme) => ({
   root: {
@@ -43,6 +44,10 @@ const Custom500: NextPage = () => {
   const { classes } = useStyles();
   return (
     <>
+      <Head>
+        <title>500 Error Page</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <Container className={classes.root}>
         <div className={classes.label}>500</div>
         <Title className={classes.title}>Bir Hata Oluştu.</Title>

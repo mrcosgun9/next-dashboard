@@ -1,4 +1,3 @@
-import type { NextPage } from "next";
 import { createStyles, Text, Card, RingProgress, Group } from '@mantine/core';
 
 const useStyles = createStyles((theme) => ({
@@ -48,7 +47,7 @@ interface StatsRingCardProps {
     label: string;
   }[];
 }
-const HomeCard: NextPage = ({ title, completed, total, stats }: StatsRingCardProps) => {
+function HomeCard({ title, completed, total, stats }: StatsRingCardProps) {
   const { classes, theme } = useStyles();
   const items = stats.map((stat) => (
     <div key={stat.label}>
