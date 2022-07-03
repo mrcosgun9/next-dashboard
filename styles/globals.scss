@@ -1,0 +1,10 @@
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-slate-100 font-mono;
+}
+
+@import "./auth/auth.scss";
+@import "./forms/forms.scss";
+@import "./elements/button.scss";

@@ -2,7 +2,7 @@ import { Navbar, ScrollArea } from "@mantine/core";
 import type { NextPage } from "next";
 import { useRouter } from "next/router";
 import { useState } from "react";
-import { Forms, Home, Table, Article } from "tabler-icons-react";
+import { Forms, Home, Table, Article, Lock } from "tabler-icons-react";
 import NavbarLinksGroup from "./NavBarLinksGroups/NavbarLinksGroup";
 
 const NavbarIndex: NextPage = () => {
@@ -30,6 +30,16 @@ const NavbarIndex: NextPage = () => {
         { label: '503 Page', link: '/page/error/503' },
         { label: 'Blank Page', link: '/page/blank' },
 
+      ],
+    },
+    {
+      label: 'Authentications',
+      icon: Lock,
+      initiallyOpened: router.pathname.includes('/page/'),
+      links: [
+        { label: 'Login', link: '/auth/login' },
+        { label: 'Register', link: '/auth/register' },
+        { label: 'Forgot Password', link: '/auth/forgot-password' },
       ],
     },
     {

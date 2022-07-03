@@ -1,8 +1,5 @@
 import type { NextPage } from "next";
-import {
-  Table,
-
-} from '@mantine/core';
+import { Table } from '@mantine/core';
 import MainLayout from "../../layouts/MainLayout";
 const elements = [
   { position: 6, mass: 12.011, symbol: 'C', name: 'Carbon' },

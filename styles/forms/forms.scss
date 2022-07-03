@@ -1,0 +1,16 @@
+.form-container {
+  @apply shadow-xl rounded-md p-4 bg-white min-w-min;
+  .form-title {
+    h1 {
+      @apply text-base border-b border-gray-300 pb-1;
+    }
+    p {
+      @apply text-xs py-1;
+    }
+  }
+  .form-content {
+  }
+  .form-footer {
+    @apply flex flex-wrap justify-between items-end pt-4;
+  }
+}
